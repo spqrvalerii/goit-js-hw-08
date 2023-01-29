@@ -24,10 +24,7 @@ function onSubmitForm(e) {
 const data = localStorage.getItem(LOCALSTORAGE_KEY);
 const parseData = JSON.parse(data);
 
-if (parseData.email) {
-  email.value = parseData.email;  
-};
-
-if (parseData.message) {  
-  message.value = parseData.message;
+if (parseData) {
+    parseData.email ? email.value = parseData.email :  email.value = ''
+    parseData.message ? message.value = parseData.message : message.value = ''
 };
